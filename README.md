@@ -1,13 +1,6 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF1744&height=150&section=header&text=BEELZE&fontSize=90&fontColor=ffffff&animation=twinkling&fontAlignY=42&desc=Red%20Team%20%7C%20CVE%20Researcher%20%7C%20Bug%20Bounty%20Hunter&descAlignY=65&descSize=18&descColor=FF5252"/>
-
 <div align="center">
 
-<!--
-  🎨 BANNER — Ganti bagian ini dengan banner AI yang lo generate.
-  Prompt Midjourney ada di bawah README ini (section AI PROMPT).
-  Upload banner.png ke repo yang sama, lalu uncomment baris berikut:
--->
-<!-- <img width="100%" src="banner.png" alt="BEELZE Banner"/> -->
+<img width="100%" src="banner.svg" alt="BEELZE"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1000&color=FF1744&center=true&vCenter=true&width=700&lines=Bug+Bounty+Hunter;Red+Teamer;CVE+Researcher+%26+PoC+Builder;WordPress+Vulnerability+Analyst;0day+Hunter;You+Found+Nothing+%F0%9F%98%88" alt="Typing SVG" />
 
@@ -134,18 +127,3 @@ Windows 11 Pro
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF1744&height=80&section=footer"/>
 
-<!--
-═══════════════════════════════════════════════════
-  🎨 AI BANNER PROMPT (Midjourney / Leonardo AI)
-═══════════════════════════════════════════════════
-
-cyberpunk hacker profile banner, "BEELZE" massive 3D metallic dark red glowing text,
-cracked chrome texture on letters, dark black background #0D1117, anime hacker silhouette
-character looking sideways, red skull motif with crimson glow, terminal overlay text
-"ACCESS GRANTED" "ZERO DAY" "SYSTEM OWNED" "YOU FOUND NOTHING", binary rain backdrop,
-red neon circuit hex patterns, dramatic red laser beam lighting, 3D extruded letters
-with deep shadow, ultra realistic render, 1920x600 wide banner --ar 16:5 --v 6 --style raw
-
-Untuk Leonardo AI: pilih model "Phoenix" atau "Flux", aspect ratio 16:5, style "Dark Fantasy"
-═══════════════════════════════════════════════════
--->
