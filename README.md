@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="banner.svg" alt="BEELZE"/>
+<img src="profile.svg" width="500" alt="BEELZE"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1000&color=FF1744&center=true&vCenter=true&width=700&lines=Bug+Bounty+Hunter;Red+Teamer;CVE+Researcher+%26+PoC+Builder;WordPress+Vulnerability+Analyst;0day+Hunter;You+Found+Nothing+%F0%9F%98%88" alt="Typing SVG" />
 
@@ -117,7 +117,7 @@ Windows 11 Pro
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/EMAIL-kaymaizuru%40gmail.com-FF1744?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaymaizuru@gmail.com)
+[![Telegram](https://img.shields.io/badge/TELEGRAM-@beelzehere-FF1744?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/beelzehere)
 &nbsp;
 [![GitHub](https://img.shields.io/badge/GITHUB-1beelze-FF1744?style=for-the-badge&logo=github&logoColor=white)](https://github.com/1beelze)
 
