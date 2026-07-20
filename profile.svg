@@ -1,0 +1,305 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 530" width="500" height="530">
+<defs>
+
+  <!-- Edge glow for character silhouette -->
+  <filter id="cGlow" x="-18%" y="-18%" width="136%" height="136%">
+    <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="exp"/>
+    <feGaussianBlur in="exp" stdDeviation="5" result="blur"/>
+    <feFlood flood-color="#FF1744" flood-opacity="0.95" result="red"/>
+    <feComposite in="red" in2="blur" operator="in" result="glow"/>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Intense ring glow -->
+  <filter id="rGlow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="9" result="blur"/>
+    <feFlood flood-color="#FF1744" flood-opacity="1" result="red"/>
+    <feComposite in="red" in2="blur" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <!-- Soft glow for decorative elements -->
+  <filter id="sGlow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="5" result="blur"/>
+    <feFlood flood-color="#FF1744" flood-opacity="0.9" result="red"/>
+    <feComposite in="red" in2="blur" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+
+  <!-- 3D text glow -->
+  <filter id="tGlow" x="-28%" y="-90%" width="156%" height="280%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="14" result="b1"/>
+    <feFlood flood-color="#FF1744" result="r1"/>
+    <feComposite in="r1" in2="b1" operator="in" result="g1"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="b2"/>
+    <feFlood flood-color="#FF7788" result="r2"/>
+    <feComposite in="r2" in2="b2" operator="in" result="g2"/>
+    <feMerge>
+      <feMergeNode in="g1"/><feMergeNode in="g1"/>
+      <feMergeNode in="g2"/><feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Text gradient top-to-bottom -->
+  <linearGradient id="tF" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#FF9999"/>
+    <stop offset="22%"  stop-color="#FF4466"/>
+    <stop offset="65%"  stop-color="#FF1744"/>
+    <stop offset="100%" stop-color="#7A0011"/>
+  </linearGradient>
+
+  <!-- Ring inner gradient -->
+  <radialGradient id="ringInner" cx="50%" cy="42%" r="52%">
+    <stop offset="0%"   stop-color="#220008" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Clip: inside ring only -->
+  <clipPath id="rc"><circle cx="250" cy="208" r="195"/></clipPath>
+
+</defs>
+
+<!-- ══════════════════════════════════ -->
+<!--  BACKGROUND                       -->
+<!-- ══════════════════════════════════ -->
+<rect width="500" height="530" fill="#040001"/>
+
+<!-- Soft inner warmth behind character -->
+<ellipse cx="250" cy="208" rx="175" ry="175" fill="url(#ringInner)"/>
+
+<!-- ══════════════════════════════════ -->
+<!--  BINARY RAIN (inside ring, static)-->
+<!-- ══════════════════════════════════ -->
+<g clip-path="url(#rc)" font-family="'Courier New',monospace" font-size="11"
+   fill="#FF1744" opacity="0.09" letter-spacing="0">
+  <text x="85"  y="30">1<tspan dy="14" x="85">0</tspan><tspan dy="14" x="85">1</tspan><tspan dy="14" x="85">1</tspan><tspan dy="14" x="85">0</tspan><tspan dy="14" x="85">A</tspan><tspan dy="14" x="85">1</tspan><tspan dy="14" x="85">F</tspan><tspan dy="14" x="85">0</tspan><tspan dy="14" x="85">1</tspan><tspan dy="14" x="85">B</tspan><tspan dy="14" x="85">1</tspan><tspan dy="14" x="85">0</tspan><tspan dy="14" x="85">C</tspan><tspan dy="14" x="85">1</tspan><tspan dy="14" x="85">0</tspan></text>
+  <text x="115" y="15">0<tspan dy="14" x="115">1</tspan><tspan dy="14" x="115">1</tspan><tspan dy="14" x="115">0</tspan><tspan dy="14" x="115">D</tspan><tspan dy="14" x="115">1</tspan><tspan dy="14" x="115">0</tspan><tspan dy="14" x="115">E</tspan><tspan dy="14" x="115">1</tspan><tspan dy="14" x="115">1</tspan><tspan dy="14" x="115">0</tspan><tspan dy="14" x="115">F</tspan><tspan dy="14" x="115">1</tspan><tspan dy="14" x="115">0</tspan><tspan dy="14" x="115">1</tspan><tspan dy="14" x="115">0</tspan></text>
+  <text x="145" y="8" >1<tspan dy="14" x="145">0</tspan><tspan dy="14" x="145">0</tspan><tspan dy="14" x="145">1</tspan><tspan dy="14" x="145">F</tspan><tspan dy="14" x="145">F</tspan><tspan dy="14" x="145">0</tspan><tspan dy="14" x="145">1</tspan><tspan dy="14" x="145">0</tspan><tspan dy="14" x="145">A</tspan><tspan dy="14" x="145">1</tspan><tspan dy="14" x="145">0</tspan><tspan dy="14" x="145">1</tspan><tspan dy="14" x="145">B</tspan><tspan dy="14" x="145">0</tspan><tspan dy="14" x="145">1</tspan></text>
+  <text x="340" y="22">1<tspan dy="14" x="340">0</tspan><tspan dy="14" x="340">1</tspan><tspan dy="14" x="340">F</tspan><tspan dy="14" x="340">0</tspan><tspan dy="14" x="340">1</tspan><tspan dy="14" x="340">A</tspan><tspan dy="14" x="340">0</tspan><tspan dy="14" x="340">1</tspan><tspan dy="14" x="340">0</tspan><tspan dy="14" x="340">1</tspan><tspan dy="14" x="340">B</tspan><tspan dy="14" x="340">0</tspan><tspan dy="14" x="340">1</tspan><tspan dy="14" x="340">0</tspan><tspan dy="14" x="340">C</tspan></text>
+  <text x="372" y="42">0<tspan dy="14" x="372">1</tspan><tspan dy="14" x="372">0</tspan><tspan dy="14" x="372">1</tspan><tspan dy="14" x="372">D</tspan><tspan dy="14" x="372">0</tspan><tspan dy="14" x="372">1</tspan><tspan dy="14" x="372">0</tspan><tspan dy="14" x="372">E</tspan><tspan dy="14" x="372">1</tspan><tspan dy="14" x="372">0</tspan><tspan dy="14" x="372">F</tspan><tspan dy="14" x="372">1</tspan><tspan dy="14" x="372">0</tspan><tspan dy="14" x="372">1</tspan><tspan dy="14" x="372">0</tspan></text>
+  <text x="400" y="18">1<tspan dy="14" x="400">F</tspan><tspan dy="14" x="400">0</tspan><tspan dy="14" x="400">1</tspan><tspan dy="14" x="400">0</tspan><tspan dy="14" x="400">A</tspan><tspan dy="14" x="400">1</tspan><tspan dy="14" x="400">0</tspan><tspan dy="14" x="400">B</tspan><tspan dy="14" x="400">1</tspan><tspan dy="14" x="400">0</tspan><tspan dy="14" x="400">1</tspan><tspan dy="14" x="400">C</tspan><tspan dy="14" x="400">0</tspan><tspan dy="14" x="400">1</tspan><tspan dy="14" x="400">0</tspan></text>
+</g>
+
+<!-- ══════════════════════════════════ -->
+<!--  RING SYSTEM                      -->
+<!-- ══════════════════════════════════ -->
+
+<!-- Outermost dash ring -->
+<circle cx="250" cy="208" r="232" fill="none"
+        stroke="#FF1744" stroke-width="1.5"
+        stroke-dasharray="22 9" stroke-opacity="0.35"/>
+
+<!-- Main thick ring -->
+<circle cx="250" cy="208" r="218" fill="none"
+        stroke="#FF1744" stroke-width="8"
+        stroke-opacity="0.9" filter="url(#rGlow)"/>
+
+<!-- Secondary inner ring lines -->
+<circle cx="250" cy="208" r="210" fill="none"
+        stroke="#FF1744" stroke-width="1.5" stroke-opacity="0.5"/>
+<circle cx="250" cy="208" r="204" fill="none"
+        stroke="#FF1744" stroke-width="0.7" stroke-opacity="0.25"/>
+
+<!-- ── Protrusions & decorative plates ── -->
+<!-- TOP arrow protrusion (pointing up) -->
+<polygon points="250,-5 240,18 260,18"
+         fill="#FF1744" opacity="0.9" filter="url(#sGlow)"/>
+<polygon points="250,-12 243,4 257,4"
+         fill="#FF1744" opacity="0.6"/>
+
+<!-- LEFT module -->
+<rect x="14" y="200" width="22" height="16" rx="2"
+      fill="#FF1744" opacity="0.75" filter="url(#sGlow)"/>
+<rect x="8"  y="203" width="10" height="10" rx="1"
+      fill="#FF1744" opacity="0.5"/>
+<line x1="14" y1="205" x2="36" y2="205" stroke="#FF1744" stroke-width="0.8" opacity="0.4"/>
+
+<!-- RIGHT module -->
+<rect x="464" y="200" width="22" height="16" rx="2"
+      fill="#FF1744" opacity="0.75" filter="url(#sGlow)"/>
+<rect x="482" y="203" width="10" height="10" rx="1"
+      fill="#FF1744" opacity="0.5"/>
+<line x1="464" y1="205" x2="486" y2="205" stroke="#FF1744" stroke-width="0.8" opacity="0.4"/>
+
+<!-- BOTTOM-LEFT arrow plate -->
+<polygon points="94,357 72,375 68,358 90,340"
+         fill="#FF1744" opacity="0.8" filter="url(#sGlow)"/>
+<polygon points="80,362 62,376 59,362 76,348"
+         fill="#FF1744" opacity="0.45"/>
+
+<!-- BOTTOM-RIGHT arrow plate -->
+<polygon points="406,357 428,375 432,358 410,340"
+         fill="#FF1744" opacity="0.8" filter="url(#sGlow)"/>
+<polygon points="420,362 438,376 441,362 424,348"
+         fill="#FF1744" opacity="0.45"/>
+
+<!-- Small dot pips around ring -->
+<g fill="#FF1744" opacity="0.55">
+  <rect x="93"  y="88"  width="9" height="9" rx="1.5"/>
+  <rect x="398" y="88"  width="9" height="9" rx="1.5"/>
+  <rect x="50"  y="150" width="7" height="7" rx="1"/>
+  <rect x="443" y="150" width="7" height="7" rx="1"/>
+  <rect x="50"  y="260" width="7" height="7" rx="1"/>
+  <rect x="443" y="260" width="7" height="7" rx="1"/>
+  <rect x="92"  y="320" width="9" height="9" rx="1.5"/>
+  <rect x="399" y="320" width="9" height="9" rx="1.5"/>
+</g>
+
+<!-- Hex pattern detail on ring (top arc) -->
+<g stroke="#FF1744" stroke-width="0.8" fill="none" stroke-opacity="0.3">
+  <path d="M178,42 L186,30 L198,30 L206,42 L198,54 L186,54 Z"/>
+  <path d="M294,42 L302,30 L314,30 L322,42 L314,54 L302,54 Z"/>
+</g>
+
+<!-- ══════════════════════════════════ -->
+<!--  CHARACTER SILHOUETTE             -->
+<!-- ══════════════════════════════════ -->
+<g filter="url(#cGlow)" clip-path="url(#rc)">
+
+  <!-- HAIR — spiky front-facing -->
+  <g fill="#040001">
+    <!-- Wide base hair mass -->
+    <ellipse cx="250" cy="152" rx="75" ry="30" fill="#040001"/>
+    <!-- Individual spikes -->
+    <polygon points="196,158 204,112 213,158"/>
+    <polygon points="210,155 220,98  230,155"/>
+    <polygon points="226,152 237,82  248,152"/>
+    <polygon points="244,150 252,68  260,150"/>  <!-- center tallest -->
+    <polygon points="256,152 265,80  275,152"/>
+    <polygon points="272,155 282,98  292,155"/>
+    <polygon points="289,158 297,112 306,158"/>
+    <!-- Extra fill between spikes (no gaps) -->
+    <polygon points="202,158 213,135 225,158"/>
+    <polygon points="228,155 240,120 252,155"/>
+    <polygon points="250,154 262,118 272,154"/>
+    <polygon points="270,155 283,135 294,158"/>
+  </g>
+
+  <!-- HEAD -->
+  <ellipse cx="250" cy="192" rx="62" ry="72" fill="#040001"/>
+
+  <!-- Hood dark outline behind head -->
+  <ellipse cx="250" cy="185" rx="78" ry="90" fill="#030001" opacity="0.5"/>
+
+  <!-- NECK + COLLAR -->
+  <path d="M205,255 Q220,275 250,280 Q280,275 295,255
+           L300,272 Q282,308 250,313 Q218,308 200,272 Z"
+        fill="#040001"/>
+
+  <!-- BODY / HOODIE (wide, fills bottom of ring) -->
+  <path d="M140,435 L162,322 Q183,294 218,283
+           Q232,288 250,290 Q268,288 282,283
+           Q317,294 338,322 L360,435 Z"
+        fill="#040001"/>
+
+  <!-- Fill bottom gap -->
+  <rect x="140" y="408" width="220" height="30" fill="#040001"/>
+
+</g>
+
+<!-- ══════════════════════════════════ -->
+<!--  TERMINAL TEXT BOX (left)         -->
+<!-- ══════════════════════════════════ -->
+<rect x="52" y="248" width="152" height="86" rx="3"
+      fill="#080002" stroke="#FF1744" stroke-width="1.2" stroke-opacity="0.75"/>
+<!-- scan line tint -->
+<rect x="52" y="248" width="152" height="86" rx="3"
+      fill="#FF1744" opacity="0.018"/>
+<!-- title bar -->
+<rect x="52" y="248" width="152" height="12" rx="3" fill="#FF1744" opacity="0.12"/>
+<text x="128" y="257" text-anchor="middle"
+      font-family="'Courier New',monospace" font-size="7"
+      fill="#FF5252" opacity="0.7" letter-spacing="1">TERMINAL</text>
+
+<text font-family="'Courier New',Consolas,monospace" font-size="10.5" fill="#FF5252">
+  <tspan x="60" y="275">&gt; ACCESS GRANTED</tspan>
+  <tspan x="60" dy="16">&gt; ZERO DAY</tspan>
+  <tspan x="60" dy="16">&gt; SYSTEM OWNED</tspan>
+  <tspan x="60" dy="16" fill="#FF174466">&gt; _</tspan>
+</text>
+
+<!-- ══════════════════════════════════ -->
+<!--  SKULL (right)                    -->
+<!-- ══════════════════════════════════ -->
+<g transform="translate(342, 215)" filter="url(#sGlow)" opacity="0.72">
+  <!-- Skull head shape -->
+  <ellipse cx="30" cy="25" rx="26" ry="28" fill="none"
+           stroke="#FF1744" stroke-width="1.8"/>
+  <!-- Eye sockets -->
+  <ellipse cx="18" cy="22" rx="7"  ry="9"  fill="#FF1744" opacity="0.85"/>
+  <ellipse cx="42" cy="22" rx="7"  ry="9"  fill="#FF1744" opacity="0.85"/>
+  <!-- Nose cavity -->
+  <path d="M26,32 L30,38 L34,32 Z" fill="#FF1744" opacity="0.6"/>
+  <!-- Jaw -->
+  <rect x="11" y="44" width="38" height="14" rx="2"
+        fill="none" stroke="#FF1744" stroke-width="1.8"/>
+  <!-- Teeth lines -->
+  <line x1="18" y1="44" x2="18" y2="58" stroke="#FF1744" stroke-width="1.2"/>
+  <line x1="25" y1="44" x2="25" y2="58" stroke="#FF1744" stroke-width="1.2"/>
+  <line x1="32" y1="44" x2="32" y2="58" stroke="#FF1744" stroke-width="1.2"/>
+  <line x1="39" y1="44" x2="39" y2="58" stroke="#FF1744" stroke-width="1.2"/>
+  <!-- Cracks -->
+  <path d="M30,5 L24,22"  stroke="#FF1744" stroke-width="1" opacity="0.45"/>
+  <path d="M38,10 L34,24" stroke="#FF1744" stroke-width="1" opacity="0.45"/>
+  <!-- YOU FOUND NOTHING. -->
+  <text x="30" y="78" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="7.5"
+        fill="#FF1744" opacity="0.65" letter-spacing="0.5">YOU FOUND</text>
+  <text x="30" y="88" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="7.5"
+        fill="#FF1744" opacity="0.65" letter-spacing="0.5">NOTHING.</text>
+</g>
+
+<!-- ══════════════════════════════════ -->
+<!--  BEELZE  3D TEXT                  -->
+<!-- ══════════════════════════════════ -->
+<text text-anchor="middle" x="250" y="454"
+      font-family="Impact,'Arial Black',Arial,sans-serif"
+      font-size="74" letter-spacing="8" fill="#040001" transform="translate(9,9)">BEELZE</text>
+<text text-anchor="middle" x="250" y="454"
+      font-family="Impact,'Arial Black',Arial,sans-serif"
+      font-size="74" letter-spacing="8" fill="#0D0003" transform="translate(8,8)">BEELZE</text>
+<text text-anchor="middle" x="250" y="454"
+      font-family="Impact,'Arial Black',Arial,sans-serif"
+      font-size="74" letter-spacing="8" fill="#1A0006" transform="translate(7,7)">BEELZE</text>
+<text text-anchor="middle" x="250" y="454"
+      font-family="Impact,'Arial Black',Arial,sans-serif"
+      font-size="74" letter-spacing="8" fill="#29000A" transform="translate(6,6)">BEELZE</text>
+<text text-anchor="middle" x="250" y="454"
+      font-family="Impact,'Arial Black',Arial,sans-serif"
+      font-size="74" letter-spacing="8" fill="#3A000F" transform="translate(5,5)">BEELZE</text>
+<text text-anchor="middle" x="250" y="454"
+      font-family="Impact,'Arial Black',Arial,sans-serif"
+      font-size="74" letter-spacing="8" fill="#4D0015" transform="translate(4,4)">BEELZE</text>
+<text text-anchor="middle" x="250" y="454"
+      font-family="Impact,'Arial Black',Arial,sans-serif"
+      font-size="74" letter-spacing="8" fill="#62001C" transform="translate(3,3)">BEELZE</text>
+<text text-anchor="middle" x="250" y="454"
+      font-family="Impact,'Arial Black',Arial,sans-serif"
+      font-size="74" letter-spacing="8" fill="#7A0024" transform="translate(2,2)">BEELZE</text>
+<text text-anchor="middle" x="250" y="454"
+      font-family="Impact,'Arial Black',Arial,sans-serif"
+      font-size="74" letter-spacing="8" fill="#94002D" transform="translate(1,1)">BEELZE</text>
+
+<!-- Main text layer -->
+<text text-anchor="middle" x="250" y="454"
+      font-family="Impact,'Arial Black',Arial,sans-serif"
+      font-size="74" letter-spacing="8"
+      fill="url(#tF)" filter="url(#tGlow)">BEELZE</text>
+
+<!-- ══════════════════════════════════ -->
+<!--  HEX ">_" BADGE (bottom center)   -->
+<!-- ══════════════════════════════════ -->
+<g transform="translate(221,470)" filter="url(#sGlow)">
+  <polygon points="29,0 56,16 56,48 29,64 2,48 2,16"
+           fill="#080002" stroke="#FF1744" stroke-width="2.2"/>
+  <text x="29" y="38" text-anchor="middle"
+        font-family="'Courier New',Consolas,monospace"
+        font-size="17" fill="#FF1744" font-weight="bold">&gt;_</text>
+</g>
+
+</svg>
