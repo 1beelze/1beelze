@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 550" width="500" height="550">
+<defs>
+  <filter id="cGlow" x="-22%" y="-18%" width="144%" height="136%">
+    <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="exp"/>
+    <feGaussianBlur in="exp" stdDeviation="7" result="blur"/>
+    <feFlood flood-color="#FF1744" flood-opacity="1" result="red"/>
+    <feComposite in="red" in2="blur" operator="in" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="rGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="11" result="blur"/>
+    <feFlood flood-color="#FF1744" flood-opacity="1" result="red"/>
+    <feComposite in="red" in2="blur" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="sGlow" x="-45%" y="-45%" width="190%" height="190%">
+    <feGaussianBlur stdDeviation="7" result="blur"/>
+    <feFlood flood-color="#FF1744" flood-opacity="1" result="red"/>
+    <feComposite in="red" in2="blur" operator="in" result="g"/>
+    <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="tGlow" x="-32%" y="-80%" width="164%" height="260%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" result="tex"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="18" result="b1"/>
+    <feFlood flood-color="#FF1744" flood-opacity="1" result="r1"/>
+    <feComposite in="r1" in2="b1" operator="in" result="g1"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="b2"/>
+    <feFlood flood-color="#FF9988" flood-opacity="0.9" result="r2"/>
+    <feComposite in="r2" in2="b2" operator="in" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="tex"/></feMerge>
+  </filter>
+  <filter id="t2Glow" x="-32%" y="-80%" width="164%" height="260%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="b1"/>
+    <feFlood flood-color="#FF1744" flood-opacity="1" result="r1"/>
+    <feComposite in="r1" in2="b1" operator="in" result="g1"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="b2"/>
+    <feFlood flood-color="#FF9988" flood-opacity="0.7" result="r2"/>
+    <feComposite in="r2" in2="b2" operator="in" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <linearGradient id="tF" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#FFBBBB"/>
+    <stop offset="15%"  stop-color="#FF5566"/>
+    <stop offset="40%"  stop-color="#FF1744"/>
+    <stop offset="60%"  stop-color="#CC0030"/>
+    <stop offset="82%"  stop-color="#880022"/>
+    <stop offset="100%" stop-color="#3E000F"/>
+  </linearGradient>
+  <linearGradient id="tF2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#FF8888"/>
+    <stop offset="40%"  stop-color="#FF1744"/>
+    <stop offset="100%" stop-color="#550015"/>
+  </linearGradient>
+  <radialGradient id="bgR" cx="50%" cy="42%" r="52%">
+    <stop offset="0%"   stop-color="#1A0008" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+  <clipPath id="rc"><circle cx="250" cy="202" r="198"/></clipPath>
+</defs>
+
+<rect width="500" height="550" fill="#000000"/>
+<circle cx="250" cy="202" r="196" fill="url(#bgR)"/>
+
+<!-- BINARY RAIN -->
+<g clip-path="url(#rc)" font-family="'Courier New',monospace" font-size="11" fill="#FF1744" opacity="0.085">
+  <text x="72"  y="20">1<tspan dy="14" x="72">0</tspan><tspan dy="14" x="72">1</tspan><tspan dy="14" x="72">A</tspan><tspan dy="14" x="72">0</tspan><tspan dy="14" x="72">F</tspan><tspan dy="14" x="72">1</tspan><tspan dy="14" x="72">0</tspan><tspan dy="14" x="72">B</tspan><tspan dy="14" x="72">1</tspan><tspan dy="14" x="72">0</tspan><tspan dy="14" x="72">C</tspan><tspan dy="14" x="72">1</tspan><tspan dy="14" x="72">0</tspan><tspan dy="14" x="72">1</tspan></text>
+  <text x="104" y="8">0<tspan dy="14" x="104">1</tspan><tspan dy="14" x="104">D</tspan><tspan dy="14" x="104">0</tspan><tspan dy="14" x="104">E</tspan><tspan dy="14" x="104">1</tspan><tspan dy="14" x="104">0</tspan><tspan dy="14" x="104">F</tspan><tspan dy="14" x="104">1</tspan><tspan dy="14" x="104">0</tspan><tspan dy="14" x="104">1</tspan><tspan dy="14" x="104">0</tspan><tspan dy="14" x="104">A</tspan><tspan dy="14" x="104">1</tspan></text>
+  <text x="355" y="18">1<tspan dy="14" x="355">0</tspan><tspan dy="14" x="355">F</tspan><tspan dy="14" x="355">0</tspan><tspan dy="14" x="355">A</tspan><tspan dy="14" x="355">1</tspan><tspan dy="14" x="355">0</tspan><tspan dy="14" x="355">B</tspan><tspan dy="14" x="355">1</tspan><tspan dy="14" x="355">0</tspan><tspan dy="14" x="355">C</tspan><tspan dy="14" x="355">1</tspan><tspan dy="14" x="355">0</tspan><tspan dy="14" x="355">1</tspan></text>
+  <text x="390" y="32">0<tspan dy="14" x="390">1</tspan><tspan dy="14" x="390">E</tspan><tspan dy="14" x="390">0</tspan><tspan dy="14" x="390">F</tspan><tspan dy="14" x="390">1</tspan><tspan dy="14" x="390">0</tspan><tspan dy="14" x="390">A</tspan><tspan dy="14" x="390">1</tspan><tspan dy="14" x="390">0</tspan><tspan dy="14" x="390">1</tspan><tspan dy="14" x="390">0</tspan><tspan dy="14" x="390">B</tspan><tspan dy="14" x="390">1</tspan></text>
+  <text x="422" y="10">F<tspan dy="14" x="422">0</tspan><tspan dy="14" x="422">1</tspan><tspan dy="14" x="422">A</tspan><tspan dy="14" x="422">0</tspan><tspan dy="14" x="422">B</tspan><tspan dy="14" x="422">1</tspan><tspan dy="14" x="422">C</tspan><tspan dy="14" x="422">0</tspan><tspan dy="14" x="422">1</tspan><tspan dy="14" x="422">0</tspan><tspan dy="14" x="422">F</tspan><tspan dy="14" x="422">1</tspan><tspan dy="14" x="422">0</tspan></text>
+</g>
+
+<!-- RING SYSTEM -->
+<circle cx="250" cy="202" r="222" fill="none" stroke="#FF1744" stroke-width="1.5" stroke-dasharray="20 8" stroke-opacity="0.3"/>
+<circle cx="250" cy="202" r="210" fill="none" stroke="#FF1744" stroke-width="14" stroke-dasharray="25 5.5" stroke-linecap="round" filter="url(#rGlow)"/>
+<circle cx="250" cy="202" r="203" fill="none" stroke="#FF1744" stroke-width="1.5" stroke-opacity="0.5"/>
+<circle cx="250" cy="202" r="197" fill="none" stroke="#FF1744" stroke-width="0.7" stroke-opacity="0.22"/>
+
+<!-- TOP SPIKE -->
+<polygon points="250,-2 236,30 264,30" fill="#FF1744" filter="url(#sGlow)" opacity="0.95"/>
+<polygon points="250,-8 243,8 257,8" fill="#FF1744" opacity="0.5"/>
+
+<!-- BOTTOM-LEFT WING -->
+<path d="M78,348 L42,406 L35,424 L58,408 L94,386 L110,396 L100,370 Z" fill="#FF1744" filter="url(#sGlow)" opacity="0.92"/>
+<path d="M83,354 L52,404 L60,412 L92,390 L107,396 L98,374 Z" fill="#050001" stroke="#FF1744" stroke-width="1" stroke-opacity="0.5"/>
+
+<!-- BOTTOM-RIGHT WING -->
+<path d="M422,348 L458,406 L465,424 L442,408 L406,386 L390,396 L400,370 Z" fill="#FF1744" filter="url(#sGlow)" opacity="0.92"/>
+<path d="M417,354 L448,404 L440,412 L408,390 L393,396 L402,374 Z" fill="#050001" stroke="#FF1744" stroke-width="1" stroke-opacity="0.5"/>
+
+<!-- SIDE MODULES -->
+<rect x="34"  y="194" width="28" height="16" rx="3" fill="#FF1744" opacity="0.82" filter="url(#sGlow)"/>
+<rect x="28"  y="197" width="11" height="10" rx="2" fill="#FF1744" opacity="0.5"/>
+<rect x="438" y="194" width="28" height="16" rx="3" fill="#FF1744" opacity="0.82" filter="url(#sGlow)"/>
+<rect x="461" y="197" width="11" height="10" rx="2" fill="#FF1744" opacity="0.5"/>
+
+<!-- PIPS -->
+<g fill="#FF1744" opacity="0.52">
+  <circle cx="99"  cy="79"  r="4.5"/>
+  <circle cx="401" cy="79"  r="4.5"/>
+  <circle cx="53"  cy="145" r="3.2"/>
+  <circle cx="447" cy="145" r="3.2"/>
+  <circle cx="53"  cy="260" r="3.2"/>
+  <circle cx="447" cy="260" r="3.2"/>
+  <circle cx="97"  cy="323" r="4.5"/>
+  <circle cx="403" cy="323" r="4.5"/>
+</g>
+
+<!-- HEX ACCENTS -->
+<g stroke="#FF1744" stroke-width="0.9" fill="none" stroke-opacity="0.32">
+  <path d="M175,33 L184,18 L200,18 L209,33 L200,48 L184,48 Z"/>
+  <path d="M291,33 L300,18 L316,18 L325,33 L316,48 L300,48 Z"/>
+</g>
+
+<!-- CHARACTER SILHOUETTE -->
+<g filter="url(#cGlow)" clip-path="url(#rc)">
+  <g fill="#000000">
+    <ellipse cx="258" cy="152" rx="82" ry="36"/>
+    <polygon points="188,160 200,100 215,160"/>
+    <polygon points="205,158 218,82  234,158"/>
+    <polygon points="222,155 238,60  254,155"/>
+    <polygon points="244,153 258,42  272,153"/>
+    <polygon points="264,155 278,64  292,155"/>
+    <polygon points="280,158 293,86  307,158"/>
+    <polygon points="295,161 306,106 318,161"/>
+    <polygon points="202,160 218,130 234,160"/>
+    <polygon points="226,157 244,118 260,157"/>
+    <polygon points="252,155 268,116 282,155"/>
+    <polygon points="276,158 294,132 310,162"/>
+  </g>
+  <ellipse cx="258" cy="196" rx="64" ry="78" fill="#000000"/>
+  <rect x="237" y="268" width="42" height="24" rx="5" fill="#000000"/>
+  <polygon points="218,285 237,265 237,298 210,318" fill="#000000"/>
+  <polygon points="298,285 279,265 279,298 306,318" fill="#000000"/>
+  <path d="M198,308 L178,445 L338,445 L318,308 Q298,292 258,290 Q218,292 198,308 Z" fill="#000000"/>
+</g>
+
+<!-- TERMINAL BOX -->
+<rect x="44" y="248" width="160" height="96" rx="3" fill="#050001" stroke="#FF1744" stroke-width="1.3" stroke-opacity="0.82"/>
+<rect x="44" y="248" width="160" height="13" rx="3" fill="#FF1744" opacity="0.15"/>
+<text x="124" y="258" text-anchor="middle" font-family="'Courier New',monospace" font-size="7.5" fill="#FF5252" opacity="0.75" letter-spacing="1.5">TERMINAL</text>
+<text font-family="'Courier New',Consolas,monospace" font-size="11.5" fill="#FF5252">
+  <tspan x="52" y="280">&gt; ACCESS GRANTED</tspan>
+  <tspan x="52" dy="18">&gt; ZERO DAY</tspan>
+  <tspan x="52" dy="18">&gt; SYSTEM OWNED</tspan>
+  <tspan x="52" dy="18" fill="#FF174455">&gt; _</tspan>
+</text>
+
+<!-- SKULL -->
+<g transform="translate(338,190)" filter="url(#sGlow)" opacity="0.78">
+  <ellipse cx="34" cy="32" rx="30" ry="33" fill="none" stroke="#FF1744" stroke-width="2"/>
+  <ellipse cx="20" cy="27" rx="9"  ry="11" fill="#FF1744" opacity="0.9"/>
+  <ellipse cx="48" cy="27" rx="9"  ry="11" fill="#FF1744" opacity="0.9"/>
+  <path d="M30,38 L34,44 L38,38 Z" fill="#FF1744" opacity="0.65"/>
+  <path d="M34,6 L28,20 L36,24" stroke="#FF1744" stroke-width="1.2" fill="none" opacity="0.55"/>
+  <rect x="12" y="53" width="44" height="16" rx="2" fill="none" stroke="#FF1744" stroke-width="2"/>
+  <line x1="20" y1="53" x2="20" y2="69" stroke="#FF1744" stroke-width="1.5"/>
+  <line x1="28" y1="53" x2="28" y2="69" stroke="#FF1744" stroke-width="1.5"/>
+  <line x1="36" y1="53" x2="36" y2="69" stroke="#FF1744" stroke-width="1.5"/>
+  <line x1="44" y1="53" x2="44" y2="69" stroke="#FF1744" stroke-width="1.5"/>
+  <line x1="50" y1="53" x2="50" y2="69" stroke="#FF1744" stroke-width="1.5"/>
+  <text x="34" y="85"  text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#FF1744" opacity="0.82">YOU FOUND</text>
+  <text x="34" y="95" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#FF1744" opacity="0.82">NOTHING.</text>
+</g>
+
+<!-- HEX ">_" BADGE -->
+<g transform="translate(222,407)" filter="url(#sGlow)">
+  <polygon points="28,0 55,16 55,48 28,64 1,48 1,16" fill="#050001" stroke="#FF1744" stroke-width="2.3"/>
+  <text x="28" y="38" text-anchor="middle" font-family="'Courier New',Consolas,monospace" font-size="17" fill="#FF1744" font-weight="bold">&gt;_</text>
+</g>
+
+<!-- BEELZE — 16-layer 3D extrusion -->
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#040001" transform="translate(16,16)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#0C0002" transform="translate(15,15)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#130004" transform="translate(14,14)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#1C0006" transform="translate(13,13)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#260009" transform="translate(12,12)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#31000C" transform="translate(11,11)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#3D0010" transform="translate(10,10)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#4C0015" transform="translate(9,9)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#5B001A" transform="translate(8,8)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#6C0020" transform="translate(7,7)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#7E0027" transform="translate(6,6)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#90002E" transform="translate(5,5)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#A30035" transform="translate(4,4)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#B6003D" transform="translate(3,3)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#CA0045" transform="translate(2,2)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="#DE004E" transform="translate(1,1)">BEELZE</text>
+<text text-anchor="middle" x="250" y="488" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="90" letter-spacing="5" fill="url(#tF)" filter="url(#tGlow)">BEELZE</text>
+
+<!-- 1beelze — sub-line, 8-layer extrusion -->
+<text text-anchor="middle" x="250" y="534" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="46" letter-spacing="4" fill="#040001" transform="translate(8,8)">1beelze</text>
+<text text-anchor="middle" x="250" y="534" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="46" letter-spacing="4" fill="#1C0006" transform="translate(7,7)">1beelze</text>
+<text text-anchor="middle" x="250" y="534" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="46" letter-spacing="4" fill="#390010" transform="translate(6,6)">1beelze</text>
+<text text-anchor="middle" x="250" y="534" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="46" letter-spacing="4" fill="#56001A" transform="translate(5,5)">1beelze</text>
+<text text-anchor="middle" x="250" y="534" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="46" letter-spacing="4" fill="#730024" transform="translate(4,4)">1beelze</text>
+<text text-anchor="middle" x="250" y="534" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="46" letter-spacing="4" fill="#900030" transform="translate(3,3)">1beelze</text>
+<text text-anchor="middle" x="250" y="534" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="46" letter-spacing="4" fill="#AE003A" transform="translate(2,2)">1beelze</text>
+<text text-anchor="middle" x="250" y="534" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="46" letter-spacing="4" fill="#CC0045" transform="translate(1,1)">1beelze</text>
+<text text-anchor="middle" x="250" y="534" font-family="Impact,'Arial Black',Arial,sans-serif" font-size="46" letter-spacing="4" fill="url(#tF2)" filter="url(#t2Glow)">1beelze</text>
+
+</svg>
